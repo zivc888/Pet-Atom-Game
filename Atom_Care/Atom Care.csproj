@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D6ACC6BC-90DB-4442-ADFA-60898EA51C6F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Atom_Care</RootNamespace>
+    <AssemblyName>Atom Care</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\WMPLib.1.0.0\lib\AxInterop.WMPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.WMPLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\WMPLib.1.0.0\lib\Interop.WMPLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Atom.cs" />
+    <Compile Include="Atom_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atom_main.Designer.cs">
+      <DependentUpon>Atom_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory.cs" />
+    <Compile Include="market.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="market.Designer.cs">
+      <DependentUpon>market.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Atom_main.resx">
+      <DependentUpon>Atom_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="market.resx">
+      <DependentUpon>market.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\atom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\energy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\stable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\happy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\eyes\eye_crazy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\eyes\eye_excited.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\eyes\eye_surprized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\eyes\eye_plead.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\atom with eyes\crazy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\atom with eyes\crazy_cropped.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\coin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\shop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\atom with eyes\atom_eyes1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\atom with eyes\atom_eyes2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\atom with eyes\atom_eyes3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\atom with eyes\atom_eyes4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\shop_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\gamma_ray.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\photon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\electron.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\photon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\start_background.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="pictures\Music\music.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
